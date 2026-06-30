@@ -1,3 +1,4 @@
+import globals from 'globals'
 const js = require('@eslint/js')
 const react = require('eslint-plugin-react')
 const jest = require('eslint-plugin-jest')
@@ -52,6 +53,7 @@ module.exports = [
       globals: {
         ...globals.browser,
         ...globals.es6,
+        ...globals.node,
         ...globals.jest
       }
     },
