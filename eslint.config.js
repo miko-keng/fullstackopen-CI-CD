@@ -107,6 +107,21 @@ export default [
     rules: {
       'no-undef': 'off'
     }
-  } 
+  },
+
+  {
+    files: ['playwright.config.js'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+        ...globals.es6
+      }
+    },
+    rules: {
+      'no-undef': 'off'
+    }
+  }
 
 ]
