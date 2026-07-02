@@ -92,6 +92,21 @@ export default [
     rules: {
       'no-undef': 'off'
       } 
-  }
+  },
+  
+  {
+    files: ['e2e-tests/**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+        ...globals.es6
+      }
+    },
+    rules: {
+      'no-undef': 'off'
+    }
+  } 
 
 ]
